@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import AddTaskForm from './AddTaskForm';
-import './App.css';
 import TasksList from './TasksList';
 
 export type Task = {
