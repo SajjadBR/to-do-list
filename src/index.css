@@ -1,13 +1,77 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.add-task-form{
+  /* background-color: aquamarine; */
+  padding: 1em;
+  
+}
+.add-task-input{
+  width: 40%;
+  outline: none;
+  padding: .5em;
+  border-radius: .5em;
+  margin: 0 1em;
+}
+.add-task-button{
+  background-color: rgb(12, 150, 12);
+  transition: opacity .5s;
+  color: #FFF;
+  padding: .5em 1.5em;
+  border-radius: .5em;
+}
+.add-task-button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.tasks-list {
+  /* background-color: rgb(110, 110, 110); */
+  padding: 1em;
+  list-style: none;
+}
+.task-item {
+  background-color: #FFF;
+  border-radius: .4em;
+  box-shadow: 0 0 3px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: .5em 1em;
+  margin-bottom: .5em;
+  transition: background-color .3s;
+}
+.task-item.done{
+  background-color: rgb(70, 173, 66);
+}
+.task-text {
+  width: 50%;
+  text-align: start;
+  /* background-color: aqua; */
+}
+.task-date{
+  width: 25%;
+  /* background-color: blueviolet; */
+}
+.task-buttons>button{
+  color: #FFF;
+  margin: 0 .2em;
+  padding: .3em 1em;
+  border-radius: .4em;
+  height: 100%;
+}
+.task-delete{
+  background-color: red;
+}
+.task-edit{
+  background-color: rgb(71, 71, 255);
+}
+.task-do{
+  background-color: rgb(43, 126, 43);
 }
