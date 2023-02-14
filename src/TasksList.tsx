@@ -1,11 +1,14 @@
+import { Dispatch } from "react"
+import AddTaskForm from "./AddTaskForm"
 import { Task } from "./App"
 import TaskItem from "./TaskItem"
 
-export default function TasksList({tasks,removeTask,doTask}:{tasks:Task[],removeTask:((id:number)=>void),doTask:((id:number)=>void)}) {
-    const tasksUI = tasks.map(value => <TaskItem key={value.id} doTask={()=>doTask(value.id)} remove={()=>removeTask(value.id)} task={value} />)
+export default function TasksList({tasks,dispatch}:{tasks:Task[],dispatch:Dispatch<any>}) {
+    const tasksUI = tasks.map(value => <TaskItem key={value.id} dispatch={dispatch} task={value} />)
     return (
         <ul className="tasks-list">
             {tasksUI}
+            <AddTaskForm dispatch={dispatch}/>
         </ul>
     )
 }

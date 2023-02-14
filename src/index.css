@@ -8,52 +8,51 @@ button{
   border: none;
   cursor: pointer;
 }
-
-.add-task-form{
-  /* background-color: aquamarine; */
-  padding: 1em;
-  
-}
-.add-task-input{
-  width: 40%;
+input{
   outline: none;
-  padding: .5em;
-  border-radius: .5em;
-  margin: 0 1em;
 }
-.add-task-button{
-  background-color: rgb(12, 150, 12);
-  transition: opacity .5s;
-  color: #FFF;
-  padding: .5em 1.5em;
-  border-radius: .5em;
+.App {
+  padding: 1em;
 }
-.add-task-button:disabled {
-  opacity: .5;
-  cursor: not-allowed;
+.search-tasks{
+  /* background-color: blue; */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 1px solid black outset;
 }
 .tasks-list {
   /* background-color: rgb(110, 110, 110); */
-  padding: 1em;
   list-style: none;
 }
 .task-item {
-  background-color: #FFF;
   border-radius: .4em;
   box-shadow: 0 0 3px 0;
+  margin-bottom: .5em;
+  padding: 0 1em;
   display: flex;
   justify-content: space-between;
-  padding: .5em 1em;
-  margin-bottom: .5em;
   transition: background-color .3s;
 }
 .task-item.done{
   background-color: rgb(70, 173, 66);
 }
+.task-item.editing{
+  box-shadow: 0 0 8px 0;
+}
+.task-item>*{
+  margin: .5em 0;
+}
 .task-text {
   width: 50%;
   text-align: start;
   /* background-color: aqua; */
+}
+.task-text.input{
+  margin: 0;
+  border:none;
+  
 }
 .task-date{
   width: 25%;
@@ -69,11 +68,52 @@ button{
 .task-delete{
   background-color: red;
 }
-.task-edit{
-  background-color: rgb(71, 71, 255);
-}
 .task-do{
   background-color: rgb(43, 126, 43);
+}
+
+.add-task-activator {
+  padding: .7em 0;
+  text-align: center;
+  color: #808080;
+  display: block;
+  width: 100%;
+}
+.add-task-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.add-task-input {
+  width: 90%;
+  height: 100%;
+  padding: .7em;
+  /* background-color: #808080; */
+  border: none;
+}
+.add-task-form button {
+  color: #FFF;
+  margin: .4em .5em;
+  padding: .5em 1em;
+  border-radius: .5em;
+
+}
+
+.add-task-button {
+  background-color: rgb(12, 150, 12);
+  transition: opacity .5s;
+}
+.cancel-button {
+  background-color: rgb(220, 19, 19);
+}
+
+.add-task-button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 768px) {
